@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+
+    function upDate(previewPic){
+      // var image = previewPic.src;
+      // var imagestr = "'" + image + "'"
+      // var theurl = '"'+ "url" + "(" + imagestr + ")" + '"'
+      //
+      // console.log(theurl)
+      document.querySelector("#image").innerHTML = previewPic.alt;
+      document.querySelector("#image").style.backgroundImage= "url("+previewPic.src+")";
+      document.querySelector("#image").style.color= "white";
+      document.querySelector("#image").style.backgroundSize= "cover";
+	   }
+
+	  function unDo(previewPic){
+      document.querySelector("#image").innerHTML = "Hover or tab over/into an image below.";
+      document.querySelector("#image").style.color= "black";
+      document.querySelector("#image").style.backgroundImage= "none";
+	   }
+    // I used Two functions here.  Starter idea at:
+    // https://codepen.io/ColleenEMc/pen/XmZzWw  ----------------important line!
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+<!-- images and image captions retrieved on this unsplash search: https://unsplash.com/search/photos/flowers -->
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+
+        <img class = "preview"  tabindex = "1"
+            alt = "Pink cherry blossom tree."
+            src = "https://sammbrow.github.io/challengesimages/blossom.jpg" onfocus =
+            "upDate(this)" onblur = "unDo(this)" onmouseover = "upDate(this)" onmouseleave = "unDo(this)">
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "2"
+            alt = "Blue flowers."
+            src = "https://sammbrow.github.io/challengesimages/blue.jpg" onfocus =
+            "upDate(this)" onblur= "unDo(this)" onmouseover = "upDate(this)" onmouseleave = "unDo(this)">
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "3"
+            src = "https://sammbrow.github.io/challengesimages/boquet.jpg"
+            alt = "Boquet of flowers." onfocus =
+            "upDate(this)" onblur = "unDo(this)" onmouseover = "upDate(this)" onmouseleave = "unDo(this)">
+
+        <img class = "preview" tabindex = "4"
+            src = "https://sammbrow.github.io/challengesimages/daisy.jpg"
+            alt = "Daisy flowers." onfocus =
+            "upDate(this)" onblur = "unDo(this)" onmouseover = "upDate(this)" onmouseleave = "unDo(this)">
+
+        <img class = "preview" tabindex = "5"
+            src = "https://sammbrow.github.io/challengesimages/pink.jpg"
+            alt = "Pink flowers." onfocus =
+            "upDate(this)" onblur = "unDo(this)" onmouseover = "upDate(this)" onmouseleave = "unDo(this)">
+
+        <img class = "preview" tabindex = "6"
+            src = "https://sammbrow.github.io/challengesimages/red.jpg"
+            alt = "Red rose flowers." onfocus =
+            "upDate(this)" onblur = "unDo(this)" onmouseover = "upDate(this)" onmouseleave = "unDo(this)">
+</body>
+</html>
